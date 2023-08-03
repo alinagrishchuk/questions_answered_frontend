@@ -4,5 +4,5 @@ export default class QuestionModel extends Model {
   @attr title;
   @attr body;
 
-  @hasMany('answer', { async: false, inverse: 'question' }) answers;
+  @hasMany('answer', { async: true, inverse: 'question' }) answers;
 }

@@ -13,6 +13,8 @@ module('Integration | Component | answers/form', function (hooks) {
   });
 
   test('it submits the form', async function (assert) {
+    assert.expect(1);
+
     this.set('createAnswer', () => {
       assert.ok(true, 'createQuestion action is triggered');
     });
@@ -25,7 +27,5 @@ module('Integration | Component | answers/form', function (hooks) {
 
     await fillIn('#answer-form textarea', 'Body');
     await click('button[type="submit"]');
-
-    assert.expect(1);
   });
 });

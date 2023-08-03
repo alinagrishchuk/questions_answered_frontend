@@ -21,8 +21,9 @@ module.exports = {
   ],
   env: {
     browser: true,
+    node: true,
   },
-  rules: {},
+  rules: { 'qunit/require-expect': ['error', 'except-simple'] },
   overrides: [
     // node files
     {

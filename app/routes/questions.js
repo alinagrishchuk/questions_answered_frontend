@@ -3,6 +3,7 @@ import { service } from '@ember/service';
 
 export default class QuestionsRoute extends Route {
   @service store;
+
   model() {
     return this.store.findAll('question');
   }

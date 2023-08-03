@@ -14,6 +14,8 @@ module('Integration | Component | questions/form', function (hooks) {
   });
 
   test('it submits the form', async function (assert) {
+    assert.expect(1);
+
     this.set('createQuestion', () => {
       assert.ok(true, 'createQuestion action is triggered');
     });
@@ -28,7 +30,5 @@ module('Integration | Component | questions/form', function (hooks) {
     await fillIn('#question-form textarea', 'Body');
 
     await click('button[type="submit"]');
-
-    assert.expect(1);
   });
 });
