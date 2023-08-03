@@ -1,0 +1,18 @@
+<h2 class="font-semibold text-2xl my-10">Questions</h2>
+
+<ul>
+  {{#each @questions as |question|}}
+    <LinkTo
+      class="hover:text-blue-500"
+      @route="questions.show"
+      @model={{question}}
+    >
+      <div class="bg-white rounded-lg shadow-sm hover:shadow-lg p-6 mt-4 flex">
+        <div class="ml-4">
+          <p class="text-xl">{{question.title}}</p>
+          <p class="text-gray-700 mt-2">{{question.body}}</p>
+        </div>
+      </div>
+    </LinkTo>
+  {{/each}}
+</ul>
