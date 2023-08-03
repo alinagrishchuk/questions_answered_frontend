@@ -9,6 +9,7 @@ Simple app for creating questions and corresponding answers
    This is because it has brought about `42 vulnerabilities (2 low, 40 high)`
 2. I have created a new page to display question details.
    This is a simpler option compared to manipulating the question list to show newly created questions.
+3. I made the decision to skip pagination and load the entire collection of data in order to speed up the implementation process.
 
 ### Quick Start
 

@@ -1,3 +1,5 @@
 {{page-title "Question Details"}}
+
 <Questions::Details @question={{@model}} />
 <Answers::List @answers={{@model.answers}} />
+<Answers::Form @createAnswer={{this.createAnswer}} @question={{@model}} />
