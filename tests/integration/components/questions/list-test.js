@@ -6,7 +6,7 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | questions/list', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders question list', async function (assert) {
+  test('it renders questions list', async function (assert) {
     this.set('questions', [{ title: 'Title', body: 'Body' }]);
 
     await render(hbs`<Questions::List @questions={{this.questions}} />`);

@@ -1,0 +1,12 @@
+<h2 class="font-semibold text-2xl">Answers</h2>
+<ul class="mt-4">
+  {{#each @answers as |answer|}}
+    <p>
+      <div class="bg-white rounded-lg shadow-md p-6 mt-4 flex">
+        <div class="ml-4">
+          <p class="text-gray-700 mt-2">{{answer.body}}</p>
+        </div>
+      </div>
+    </p>
+  {{/each}}
+</ul>
