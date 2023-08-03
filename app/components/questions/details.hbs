@@ -1,0 +1,17 @@
+<div class="py-16">
+  <h2 class="font-semibold text-2xl">Question</h2>
+  <div class="flex items-center mt-4">
+    <LinkTo
+      @route="questions"
+      class="flex items-center justify-around rounded-full w-16 h-16 bg-white shadow-sm hover:shadow-lg hover:text-blue-500"
+    >
+      Back
+    </LinkTo>
+    <div class="flex-1 bg-white rounded-lg shadow-md p-6 flex ml-4">
+      <div class="ml-4">
+        <p class="text-xl question-title">{{@question.title}}</p>
+        <p class="text-gray-700 mt-2 question-body">{{@question.body}}</p>
+      </div>
+    </div>
+  </div>
+</div>

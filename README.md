@@ -7,7 +7,8 @@ Simple app for creating questions and corresponding answers
 1. I have added `tailwindcss` to speed up development by the usage of tailwind.
    While it seems to be working fine for now, I may need to reconsider this decision in the future.
    This is because it has brought about `42 vulnerabilities (2 low, 40 high)`
-2.
+2. I have created a new page to display question details.
+   This is a simpler option compared to manipulating the question list to show newly created questions.
 
 ### Quick Start
 
