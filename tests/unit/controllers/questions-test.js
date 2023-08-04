@@ -5,21 +5,22 @@ module('Unit | Controller | questions', function (hooks) {
   setupTest(hooks);
 
   test('it creates a new question before transitions to the show route', async function (assert) {
+    assert.expect(4);
     let controller = this.owner.lookup('controller:questions');
     let store = this.owner.lookup('service:store');
     let router = this.owner.lookup('service:router');
 
     router.transitionTo = (route, id) => {
-      assert.equal(
+      assert.strictEqual(
         route,
         'questions.show',
         'transition to the questions.show route'
       );
-      assert.equal(id, '1', 'transition with the correct id');
+      assert.strictEqual(id, '1', 'transition with the correct id');
     };
 
     store.createRecord = (modelName, recordData) => {
-      assert.equal(modelName, 'question', 'correct model name');
+      assert.strictEqual(modelName, 'question', 'correct model name');
       assert.deepEqual(
         recordData,
         { title: 'Test Title', body: 'Test Body' },
